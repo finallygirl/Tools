@@ -1,0 +1,49 @@
+{
+    "ip": "127.0.0.1",
+    "port": 5025,
+    "init": ["CONF:RES", "RES:RANG:AUTO OFF", "RES:RANG 100", "RES:NPLC 10"],
+    "reader": "MEAS:RES?",
+    "mes": true,
+    "limits": {"lower":0, "upper":200},
+    "unit": "ohm",
+    "timeout": 5,
+    "overload": 999999,
+    "interval":5,
+    "bobcat": {
+        "url": "http://127.0.0.1:8080",
+        "query":{
+            "c":"QUERY_RECORD",
+            "sn":"",
+            "tsid":"GTBN_A08-2FT-01B_1_STATION371",
+            "p":"UNIT_PROCESS_CHECK"
+        },
+        "upload":{
+            "c":"ADD_ATTR",
+            "tsid":"GTBN_A08-2FT-01B_1_STATION371",
+            "sn":"",
+            "dcr_avg":""
+        },
+        "pass":{
+            "audit_mode":"0",
+            "c":"ADD_RECORD",
+            "fixture_id":"UC1",
+            "product":"B868",
+            "result":"",
+            "sn":"",
+            "start_time":"",
+            "station_id":"GTBN_A08-2FT-01B_1_STATION371",
+            "stop_time":"",
+            "sw_version":"2.0",
+            "test_head_id":"1",
+            "test_station_name":"STATION371"
+        },
+        "fail":{
+            "failure_message":"DCR_BCF_plate_GND_NG;",  
+            "ft_1_message":"DCR_BCF_plate_GND_NG",      
+            "ft_1_sub_sub_test":"DCR_BCF_plate_GND_NG", 
+            "ft_1_sub_test":"DCR_BCF_plate_GND_NG",     
+            "ft_1_test":"DCR_BCF_plate_GND_NG",         
+            "list_of_failing_tests":"DCR_BCF_plate_GND_NG;"  
+        }
+    }
+}
